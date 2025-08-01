@@ -46,7 +46,7 @@ class PostController extends Controller {
             }
 
             if (file_exists($target_file)) {
-                //echo "Sorry, file already exists.";
+                echo "Sorry, file already exists.";
                 $uploadOk = 0;
             }
 
