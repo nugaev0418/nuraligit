@@ -1,0 +1,16 @@
+{
+    "name": "nurali/mvc",
+    "autoload": {
+        "psr-4": {
+            "Nurali\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nurali mavzurov"
+        }
+    ],
+    "require": {
+        "vendor/PHPMailer/phpmailer": "^6.10"
+    }
+}
