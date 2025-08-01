@@ -1,6 +1,6 @@
 <div class="container mt-5 mb-5">
     <div class="row">
-        <h2>Posts</h2>
+        <h2>Posts(papkalar)</h2>
         <p><a href="/post/add" class="btn btn-success">Create post</a></p>
         <table class="table">
         <tr>
