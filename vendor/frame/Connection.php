@@ -7,9 +7,9 @@ class Connection{
   private $conn;
   
   private $host = 'localhost';
-  private $user = 'nura207f_mvc';
-  private $pass = 'jtZ8%CYFS0cR';
-  private $name = 'nura207f_mvc';
+  private $user = 'root';
+  private $pass = 'root';
+  private $name = 'news';
 
   public function __construct()
   {
