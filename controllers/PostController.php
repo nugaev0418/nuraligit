@@ -51,7 +51,7 @@ class PostController extends Controller {
             }
 
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+               // echo "Sorry, your file was not uploaded.";
 
             } else {
                 if (move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_file)) {
