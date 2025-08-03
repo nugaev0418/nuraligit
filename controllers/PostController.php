@@ -37,7 +37,7 @@ class PostController extends Controller {
             if(isset($_POST["submit"])) {
                 $check = getimagesize($_FILES["image_file"]["tmp_name"]);
                 if($check !== false) {
-                    echo "File is an image - " . $check["mime"] . ".";
+                   // echo "File is an image - " . $check["mime"] . ".";
 
                 } else {
                     echo "File is not an image.";
@@ -46,7 +46,7 @@ class PostController extends Controller {
             }
 
             if (file_exists($target_file)) {
-                echo "Sorry, file already exists.";
+               // echo "Sorry, file already exists.";
                 $uploadOk = 0;
             }
 
