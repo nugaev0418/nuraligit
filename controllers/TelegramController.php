@@ -15,12 +15,12 @@ class TelegramController extends Controller
 // Telegramdan kelgan JSON ma'lumotni o'qiymiz
         $update = json_decode(file_get_contents("php://input"), true);
 
-// Agar ma'lumot bo'sh bo'lsa, chiqamiz
+
         if (!$update) {
             exit;
         }
 
-// Kerakli ma'lumotlarni ajratib olamiz
+
         $chat_id = $update["message"]["chat"]["id"];
         $text = $update["message"]["text"];
 
