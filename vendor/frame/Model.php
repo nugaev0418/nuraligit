@@ -30,6 +30,8 @@ class Model {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+
+
     public function getById($id) {
         $sql = "SELECT * FROM {$this->tableName()} WHERE id = :id";
         $stmt = $this->db->prepare($sql);

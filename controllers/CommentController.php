@@ -46,6 +46,7 @@ class CommentController extends Controller {
 
             $postModel = new Post();
             $posts = $postModel->getList();
+
             $this->render('comment/add', [
                 'users' => $users,
                 'posts' => $posts
@@ -74,6 +75,7 @@ class CommentController extends Controller {
         header('Location:/comment/list');
         exit();
     }
+
 
     
 }
