@@ -15,9 +15,6 @@ class CurlController extends Controller
 
        $curl = curl_init();
 
-
-
-
        curl_setopt($curl, CURLOPT_URL, $url);
 
        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true );
@@ -28,7 +25,6 @@ class CurlController extends Controller
 
 
        $data = (json_decode($data, true));
-
 
        $this->render('curl/test', ['data' => $data], 'Weather Test');
 

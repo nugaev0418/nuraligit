@@ -9,13 +9,9 @@ class SiteController extends Controller{
 
 public function index(){
    
-   
    $this->view->render('site/index', [], 'Home page');
 
-
 }
-
-
 public function contact(){
     
    $this->render('site/contact');
@@ -42,9 +38,8 @@ public function reg(){
       header("Location: /site/login");
       
    }
-   
-   
-   $this->view->render("/site/reg");
+
+   $this->view->render("/site/reg", [], 'Registiratsiya');
 }
 public function login(){
  
@@ -58,13 +53,11 @@ public function login(){
       $user->login($data);
 
    }
-   $this->view->render("site/login");
+   $this->view->render("site/login", [], 'Login page');
 }
 public function logout(){
    session_destroy();
    header("Location:/site/login");
 }
-
-
 
 }

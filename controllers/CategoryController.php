@@ -3,8 +3,6 @@ namespace controllers;
 use models\Category;
 use vendor\frame\Controller;
 
-
-
 class CategoryController extends Controller{
     public $id;
 

@@ -30,7 +30,6 @@
             <div class="col-md-6">
 
                 <form method="post">
-
                     <p><input type="text" name="username" class="form-control" placeholder="Username"></p>
                     <p><textarea name="message" id="" cols="30" rows="10" class="form-control" ></textarea></p>
                     <p><input type="submit" value="Yuborish" class="btn btn-success"></p>

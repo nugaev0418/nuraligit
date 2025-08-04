@@ -5,8 +5,6 @@ use models\Post;
 use models\User;
 use vendor\frame\Controller;
 
-
-
 class NewsController extends Controller
 {
     public function list(){
@@ -14,20 +12,15 @@ class NewsController extends Controller
         $result = $post->getListNews();
         $pagecount = $post->getCountPage();
 
-
         $this->render('news/list', ['posts'=>$result,
             'pagecount'=>$pagecount
 
         ]);
 
     }
-
     public function view( $id){
         $posts = new Post();
         $result = $posts->getByIdNews($id);
-
-
-
 
         $this->render('news/view', ['models' => $result], 'News view page');
     }
@@ -42,11 +35,9 @@ class NewsController extends Controller
                'message' => $_POST['textarea']
            ];
 
-
            $comment->saveCommentNews($data);
 
            header('location: /news/view/'.$_POST['id']);
-
 
        }
         $this->render('news/add', ['comments' => $comment, 'users'=>$users], 'Add news page');

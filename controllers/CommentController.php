@@ -4,7 +4,6 @@ use models\Comment;
 use vendor\frame\Controller;
 use models\User;
 use models\Post;
-
 class CommentController extends Controller {
     public function list(){
          $comment = new Comment();
