@@ -2,7 +2,9 @@
 
 namespace controllers;
 
-class TelegramController
+use vendor\frame\Controller;
+
+class TelegramController extends Controller
 {
     public function bot(){
 
