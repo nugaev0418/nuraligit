@@ -20,7 +20,7 @@ class TelegramController
 
         // Javob yuborish
         if ($chat_id && $text) {
-            $reply = "<i>Siz yozdingiz:</i> " . $text . "<a href='https://1.nugaev.uz'>Bizning sayt</a>";
+            $reply = "<a href="tg://user?id=3673579">Sardor Nugaev</a>";
             file_get_contents("{$apiUrl}sendMessage?chat_id=$chat_id&parse_mode=HTML&text=" . urlencode($reply));
         }
     }
