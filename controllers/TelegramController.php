@@ -20,8 +20,8 @@ class TelegramController
 
         // Javob yuborish
         if ($chat_id && $text) {
-            $reply = "*Siz yozdingiz:* " . $text;
-            file_get_contents("{$apiUrl}sendMessage?chat_id=$chat_id&parse_mode=MarkdownV2&text=" . urlencode($reply));
+            $reply = "<i>Siz yozdingiz:</i> " . $text;
+            file_get_contents("{$apiUrl}sendMessage?chat_id=$chat_id&parse_mode=HTML&text=" . urlencode($reply));
         }
     }
 }
