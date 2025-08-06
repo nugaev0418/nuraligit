@@ -26,7 +26,7 @@ class TelegramController
                 'text' => $reply,
                 'parse_mode' => 'HTML'
             ];
-            $url = "{$apiUrl}sendMessage?=" . http_build_query($data);
+            $url = "{$apiUrl}sendMessage?" . http_build_query($data);
 
             var_dump($url);
             file_get_contents($url);
