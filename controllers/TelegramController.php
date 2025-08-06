@@ -21,7 +21,12 @@ class TelegramController
         // Javob yuborish
         if ($chat_id && $text) {
             $reply = '<a href="tg://user?id=3673579">Sardor Nugaev</a>';
-            file_get_contents("{$apiUrl}sendMessage?chat_id=$chat_id&parse_mode=HTML&text=" . urlencode($reply));
+            $data = [
+                'chat_id' => $chat_id,
+                'text' => $reply,
+                'parse_mode' => 'HTML'
+            ];
+            file_get_contents("{$apiUrl}sendMessage?=" . http_build_query($data));
         }
     }
 }
