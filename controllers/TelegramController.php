@@ -20,7 +20,7 @@ class TelegramController
 
         // Javob yuborish
         if ($chat_id && $text) {
-            $reply = "<i>Siz yozdingiz:</i> " . $text;
+            $reply = "<i>Siz yozdingiz:</i> " . $text . '<span class="tg-spoiler">spoiler</span>, <tg-spoiler>spoiler</tg-spoiler>';
             file_get_contents("{$apiUrl}sendMessage?chat_id=$chat_id&parse_mode=HTML&text=" . urlencode($reply));
         }
     }
