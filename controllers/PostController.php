@@ -1,8 +1,8 @@
 <?php
 namespace controllers;
+use models\Category;
 use models\Post;
 use vendor\frame\Controller;
-use models\Category;
 
 class PostController extends Controller {
     public function list(){

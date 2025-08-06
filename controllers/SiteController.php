@@ -1,8 +1,8 @@
 <?php
 namespace controllers;
-use vendor\frame\Mail;
 use models\User;
 use vendor\frame\Controller;
+use vendor\frame\Mail;
 
 
 class SiteController extends Controller{
