@@ -5,7 +5,7 @@ namespace controllers;
 class TelegramController
 {
     public function bot(){
-
+        echo 'ok';
         $token = '8297930277:AAEeX9D0hmwxJdlDu7wtVXQ0dpHGzqrbCAw';
         $apiUrl = 'https://api.telegram.org/bot'.$token.'/';
 
