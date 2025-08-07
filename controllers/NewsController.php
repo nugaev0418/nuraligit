@@ -26,13 +26,13 @@ class NewsController extends Controller
     }
 
     public function add(){
-       if(isset($_POST['submit'])){
+       if(isset($_GET['submit'])){
            $user = new User();
            $users = $user->getList();
            $comment = new Comment();
            $data = [
                'user_id' => $_POST['user_id'],
-               'message' => $_POST['textarea']
+               'message' => $_POST['message']
            ];
 
            $comment->saveCommentNews($data);

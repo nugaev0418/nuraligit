@@ -1,9 +1,10 @@
 <?php
 namespace controllers;
 use models\Comment;
-use vendor\frame\Controller;
-use models\User;
 use models\Post;
+use models\User;
+use vendor\frame\Controller;
+
 class CommentController extends Controller {
     public function list(){
          $comment = new Comment();
