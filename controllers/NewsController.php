@@ -1,30 +1,24 @@
 <?php
+
 namespace controllers;
-use models\Comment;
+
 use models\Post;
-use models\User;
 use vendor\frame\Controller;
 
 class NewsController extends Controller
 {
-    public function list(){
+    public function list()
+    {
         $post = new Post();
         $result = $post->getListNews();
         $pagecount = $post->getCountPage();
 
         $this->render('news/list', ['posts'=>$result,
             'pagecount'=>$pagecount
-
         ]);
-
-    }
-    public function view( $id){
-        $posts = new Post();
-        $result = $posts->getByIdNews($id);
-
-        $this->render('news/view', ['models' => $result], 'News view page');
     }
 
+<<<<<<< HEAD
     public function add(){
        if(isset($_GET['submit'])){
            $user = new User();
@@ -44,24 +38,12 @@ class NewsController extends Controller
     }
 
     public function comment($post_id){
+=======
+    public function view($id){
+>>>>>>> 83f1caba8d04b493f41bdab7c9d4016e75d8bcd0
         $post = new Post();
-        $comment = new Comment();
-        $postnews = $post->getById($post_id);
-        $commentnews = $comment->getCommentByIdPost($post_id);
-        if(isset($_POST['submit'])){
-            $data = [
-                'post_id' => $_POST['post_id'],
-                'user_id' => $_POST['user_id'],
-                'message' => $_POST['message']
-            ];
+        $result = $post->getByIdNEWS($id);
 
-        if($comment->addComment($data)){
-            header('location: /news/view/'.$_POST['post_id']);
-            exit();
-        }
-        }
-        $this->render('news/comment', ['comments' => $commentnews, 'postnews' => $postnews, 'post_id' => $post_id]);
+        $this->render('news/view', ['model' => $result]);
     }
-
-
 }
